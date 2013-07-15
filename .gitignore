@@ -3,3 +3,6 @@ vendor
 
 #db config
 includes/config/db.php
+
+#images
+res/img
