@@ -1,0 +1,17 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+  {% set article = {
+    'title': 'Contact Me',
+    'content': '<p>Use the form below if you want to send me a question or message, and I will get back to you as soon as I can.</p>' ~ output ~ '
+    <p>
+      <form method="POST">Your Name:<br>
+        <input type="text" name="name" value="' ~ name ~ '"><br>Your Email:<br>
+        <input type="text" name="email" value="' ~ email ~ '"><br>Your Message:<br>
+        <div><textarea name="message" cols="30" rows="10">' ~ message ~ '</textarea></div>
+        <input type="submit" value="Send">
+      </form>
+    </p>'
+  } %}
+  {% include 'article.twig' %}
+{% endblock %}

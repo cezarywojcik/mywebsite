@@ -21,6 +21,7 @@ $app->get('/', function() use ($twig) {
 
 // BLOG
 $app->get('/blog', function() use ($twig) {
+    // render
     echo $twig->render('blogpost.twig', array(
         'title' => 'Blog',
         'article' => getBlogPostList()));
@@ -38,10 +39,34 @@ $app->get('/blog/:id', function($id) use ($twig) {
 
 // ABOUT
 $app->get('/about', function() use ($twig) {
-    $article['content'] = "Hello, I am Cezary Wojcik. I am currently a student studying Computer Science and Mathematics at Oregon State University. I am a Web Developer and an iPhone Developer.";
     // render
     echo $twig->render('about.twig', array(
         'title' => 'About Me'));
+});
+
+// CONTACT
+$app->get('/contact', function() use ($twig) {
+    // render
+    echo $twig->render('contact.twig', array(
+        'title' => 'Contact Me'));
+});
+$app->post('/contact', function() use ($twig) {
+    // handle php form
+    require 'includes/contact.php';
+    // render
+    echo $twig->render('contact.twig', array(
+        'title' => 'Contact Me',
+        'output' => $output,
+        'name' => $name,
+        'email' => $email,
+        'message' => $message));
+});
+
+// OTHER
+$app->get('/:other+', function() use ($twig) {
+    // render
+    echo $twig->render('404.twig', array(
+        'title' => '404'));
 });
 
 // ---- [ slim run ] ----------------------------------------------------------

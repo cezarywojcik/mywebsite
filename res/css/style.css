@@ -58,7 +58,7 @@ body {
 
 .navigation {
   background-color: #dedede;
-  border-bottom: 5px solid #919191;
+  border-bottom: 5px solid #595959;
   border-top: 5px solid #595959;
   list-style-type: none;
   margin: 0;
@@ -70,19 +70,23 @@ body {
 }
 
 .navigation a {
-  color: #09f;
+  color: #990012;
   font-size: 24px;
   line-height: 55px;
   margin-bottom: 5px;
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
   text-decoration: none;
 }
 
 .navigation a:hover {
   background-color: #ededed;
-  border-bottom: thick solid #09f;
-  border-top: 4px solid #ededed;
-  padding-bottom: 15px;
+  border-bottom: thick solid #990012;
+  border-top: thick solid #990012;
+  padding-bottom: 18px;
+  padding-top: 17px;
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .content {
@@ -126,12 +130,12 @@ body {
 }
 
 .article a {
-  color: #09f;
+  color: #990012;
   text-decoration: none;
 }
 
 .article a:hover {
-  color: #00b4ff;
+  color: #f02311;
 }
 
 .article img {
@@ -181,11 +185,63 @@ hr {
   clear: both;
 }
 
+input[type=text] {
+  background-color: #ccc;
+  border: thin solid #474747;
+  width: 250px;
+}
+
+input[type=text]:focus {
+  background-color: #fff;
+}
+
+input[type=submit] {
+  background-color: #ccc;
+  border: thin solid #474747;
+  font-family: Georgia;
+  padding: 5px 15px 5px 15px;
+}
+
+input[type=submit]:hover {
+  background-color: #fff;
+  border-color: #990012;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 5px rgba(240, 35, 17, 0.5);
+     -moz-box-shadow: 0 1px 5px rgba(240, 35, 17, 0.5);
+          box-shadow: 0 1px 5px rgba(240, 35, 17, 0.5);
+}
+
+textarea {
+  background-color: #ccc;
+  border: thin solid #474747;
+  width: 100%;
+}
+
+textarea:focus {
+  background-color: #fff;
+}
+
+textarea:focus, input:focus {
+  border-color: #990012;
+  outline: 0 none;
+  -webkit-box-shadow: 0 1px 5px rgba(240, 35, 17, 0.5);
+     -moz-box-shadow: 0 1px 5px rgba(240, 35, 17, 0.5);
+          box-shadow: 0 1px 5px rgba(240, 35, 17, 0.5);
+}
+
+.error {
+  color: #990012;
+}
+
+.success {
+  color: #006400;
+}
+
 /* ---- [ desktop ]  ------------------------------------------------------- */
 
 @media all and (min-width: 1000px) {
   body {
-   background: url('../img/back.png') repeat;
+   background: url('../img/back.png') repeat fixed;
   }
   .page {
     margin: 15px auto 15px auto;
@@ -236,10 +292,12 @@ hr {
     padding: 5px;
   }
   .navigation a:hover {
-    border-top: 9px solid #ededed;
-    padding-bottom: 14px;
+    padding-bottom: 17px;
   }
   .article-title {
     font-size: 32px;
+  }
+  input {
+    width: 100%;
   }
 }
