@@ -36,6 +36,14 @@ $app->get('/blog/:id', function($id) use ($twig) {
         'article' => $article));
 });
 
+// ABOUT
+$app->get('/about', function() use ($twig) {
+    $article['content'] = "Hello, I am Cezary Wojcik. I am currently a student studying Computer Science and Mathematics at Oregon State University. I am a Web Developer and an iPhone Developer.";
+    // render
+    echo $twig->render('about.twig', array(
+        'title' => 'About Me'));
+});
+
 // ---- [ slim run ] ----------------------------------------------------------
 
 $app->run();

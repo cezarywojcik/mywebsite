@@ -58,6 +58,8 @@ body {
 
 .navigation {
   background-color: #dedede;
+  border-bottom: 5px solid #919191;
+  border-top: 5px solid #595959;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -79,8 +81,8 @@ body {
 .navigation a:hover {
   background-color: #ededed;
   border-bottom: thick solid #09f;
-  padding-bottom: 15px;
   border-top: 4px solid #ededed;
+  padding-bottom: 15px;
 }
 
 .content {
@@ -91,6 +93,7 @@ body {
   background-color: #dedede;
   font-size: 14px;
   line-height: 1.5;
+  margin-bottom: 20px;
   padding: 5px;
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
      -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
@@ -159,15 +162,15 @@ hr {
 }
 
 .prev {
-  float:left;
+  float: left;
 }
 
 .next {
-  float:right;
+  float: right;
 }
 
 .prev, .next {
-  display:block;
+  display: block;
 }
 
 .clearfix:after {
@@ -190,6 +193,16 @@ hr {
   -webkit-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
      -moz-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
           box-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .leftbox {
+    float: left;
+    width: 402px;
+  }
+
+  .rightbox {
+    float: right;
+    width: 402px;
   }
 }
 
@@ -224,6 +237,7 @@ hr {
   }
   .navigation a:hover {
     border-top: 9px solid #ededed;
+    padding-bottom: 14px;
   }
   .article-title {
     font-size: 32px;

@@ -2,4 +2,15 @@
 
 {% block content %}
   {% include 'article.twig' %}
+  <div class="leftbox article">
+    <h1 class="article-title"><a href="/about">About Me</a></h1>
+    <hr>
+    <div class="article-content">To find out more about me, click the link above.</div>
+  </div>
+  <div class="rightbox article">
+    <h1 class="article-title"><a href="/contact">Contact Me</a></h1>
+    <hr>
+    <div class="article-content">If you want to contact me about anything, please click the link above.</div>
+  </div>
+  <div class="clearfix"></div>
 {% endblock %}
