@@ -39,6 +39,7 @@ function getArticle($id) {
         $statement->close();
         $result['timecreated'] = date('F j, Y',
             strtotime($result['timecreated']));
+        $result['content'] .= "<div class='article-footer'>~</div>";
         $prevId = $result['blogid']-1;
         $nextId = $result['blogid']+1;
         $nav = "";

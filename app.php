@@ -62,6 +62,13 @@ $app->post('/contact', function() use ($twig) {
         'message' => $message));
 });
 
+// GALLERY
+$app->get('/gallery', function() use ($twig) {
+    // render
+    echo $twig->render('gallery.twig', array(
+        'title' => 'Gallery'));
+});
+
 // OTHER
 $app->get('/:other+', function() use ($twig) {
     // render

@@ -1,0 +1,24 @@
+{% extends 'layout.twig' %}
+
+{% block head %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+{% endblock %}
+
+{% block content %}
+  {% set article = {
+    'title': 'Websites',
+    'content': '
+    <p>Test 1</p>'
+  } %}
+  {% include 'article.twig' %}
+  {% set article = {
+    'title': 'Apps',
+    'content': '<p>Test 2</p>'
+  } %}
+  {% include 'article.twig' %}
+  {% set article = {
+    'title': 'Projects',
+    'content': '<p>Test 3</p>'
+  } %}
+  {% include 'article.twig' %}
+{% endblock %}

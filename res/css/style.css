@@ -42,7 +42,7 @@ body {
 
 .title {
   color: #222; /* fallback */
-  color: rgba(20, 20, 20, 0.8);
+  color: rgba(100, 20, 20, 0.8);
   font-size: 144px;
   padding-top: 20px;
   padding-bottom: 20px;
