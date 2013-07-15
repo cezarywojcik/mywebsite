@@ -31,7 +31,8 @@ body {
 .footer {
   font-size: 12px;
   text-align: right;
-  padding: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
 }
 
 .title {
@@ -78,9 +79,36 @@ body {
 }
 
 .content {
+  padding: 25px;
+}
+
+.article {
+  background-color: #dedede;
   padding: 5px;
 }
 
+.article-title {
+  font-family: 'bebasneue';
+  text-align: center;
+}
+
+.article-footer {
+  font-size: 100px;
+  line-height:30px;
+  padding-bottom:20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+hr {
+  border-style: none;
+  width: 70%;
+  color: #aaaaaa;
+  background-color:#000000;
+  height:2px;
+  margin-left:auto;
+  margin-right:auto;
+}
 /* ---- [ desktop ]  ------------------------------------------------------- */
 
 @media all and (min-width: 1000px) {

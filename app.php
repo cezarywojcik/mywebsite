@@ -9,7 +9,8 @@ require 'config/twig.php';
 // ---- [ slim routing ] ------------------------------------------------------
 
 $app->get('/', function() use ($twig) {
-    echo $twig->render('index.twig');
+    echo $twig->render('home.twig', array(
+        'title' => 'Home'));
 });
 
 // ---- [ slim run ] ----------------------------------------------------------
