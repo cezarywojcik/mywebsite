@@ -20,12 +20,19 @@ $app->get('/', function() use ($twig) {
 });
 
 // BLOG
+$app->get('/blog', function() use ($twig) {
+    echo $twig->render('blogpost.twig', array(
+        'title' => 'Blog',
+        'article' => getBlogPostList()));
+});
+
+// BLOG POST
 $app->get('/blog/:id', function($id) use ($twig) {
     // latest blog post
     $article = getArticle($id);
     // render
     echo $twig->render('blogpost.twig', array(
-        'title' => 'Home',
+        'title' => $article['title'],
         'article' => $article));
 });
 

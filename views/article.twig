@@ -2,6 +2,10 @@
   <h1 class="article-title">{{ article.title }}</h1>
   <hr>
   <div class="article-content">
-  <i>{{ article.timecreated }}</i><br><br>{{ article.content | raw }}</div>
+  <div class="article-time">{{ article.timecreated }}</div>
+  {{ article.content | raw }}
+  </div>
   <div class="article-footer">~</div>
+  {{ article.nav | raw }}
+  <div class="clearfix"></div>
 </div>

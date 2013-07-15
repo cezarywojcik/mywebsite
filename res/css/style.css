@@ -68,7 +68,7 @@ body {
 }
 
 .navigation a {
-  color: #08c;
+  color: #09f;
   font-size: 24px;
   line-height: 55px;
   margin-bottom: 5px;
@@ -77,10 +77,10 @@ body {
 }
 
 .navigation a:hover {
-  background-color: #cfcfcf;
-  border-bottom: thick solid #08c;
+  background-color: #ededed;
+  border-bottom: thick solid #09f;
   padding-bottom: 15px;
-  border-top: 4px solid #cfcfcf;
+  border-top: 4px solid #ededed;
 }
 
 .content {
@@ -105,6 +105,11 @@ body {
   text-align: center;
 }
 
+.article-time {
+  font-style: italic;
+  padding-bottom: 5px;
+}
+
 .article-content {
   padding: 10px;
 }
@@ -118,7 +123,7 @@ body {
 }
 
 .article a {
-  color: #08c;
+  color: #09f;
   text-decoration: none;
 }
 
@@ -151,6 +156,26 @@ hr {
   height:2px;
   margin-left:auto;
   margin-right:auto;
+}
+
+.prev {
+  float:left;
+}
+
+.next {
+  float:right;
+}
+
+.prev, .next {
+  display:block;
+}
+
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 
 /* ---- [ desktop ]  ------------------------------------------------------- */
@@ -198,7 +223,7 @@ hr {
     padding: 5px;
   }
   .navigation a:hover {
-    border-top: 9px solid #c4c4c4;
+    border-top: 9px solid #ededed;
   }
   .article-title {
     font-size: 32px;
