@@ -1,0 +1,121 @@
+@font-face
+{
+  font-family: 'bebasneue';
+  src: url('bebasneue-webfont.eot');
+  src: url('bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+  url('bebasneue-webfont.woff') format('woff'),
+  url('bebasneue-webfont.ttf') format('truetype'),
+  url('bebasneue-webfont.svg#bebasneue') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ---- [ global ] --------------------------------------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../img/back.png') repeat;
+}
+
+.page {
+  background-color: #ffffff;
+  font-family: georgia;
+}
+
+.header {
+  font-family: 'bebasneue';
+  text-align: center;
+}
+
+.footer {
+  font-size: 12px;
+  text-align: right;
+  padding: 5px;
+}
+
+.title {
+  color: #222; /* fallback */
+  color: rgba(20, 20, 20, 0.8);
+  font-size: 144px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 24px;
+  margin-top: -40px;
+  padding-bottom: 10px;
+}
+
+.navigation {
+  background-color: #dedede;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  display: inline;
+}
+
+.navigation a {
+  color: #08c;
+  font-size: 24px;
+  line-height: 55px;
+  margin-bottom: 5px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  background-color: #c4c4c4;
+  border-bottom: thick solid #08c;
+  padding-bottom: 15px;
+  border-top: 4px solid #c4c4c4;
+}
+
+.content {
+  padding: 5px;
+}
+
+/* ---- [ desktop ]  ------------------------------------------------------- */
+
+@media all and (min-width: 1000px) {
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 900px;
+    -moz-box-shadow:    0 0 15px #999;
+    -webkit-box-shadow: 0 0 15px #999;
+    box-shadow:         0 0 15px #999;
+  }
+}
+
+/* ---- [ tablet ] --------------------------------------------------------- */
+
+@media all and (max-width: 999px) {
+  .title {
+    font-size: 100px;
+  }
+}
+/* ---- [ mobile ] --------------------------------------------------------- */
+
+@media all and (max-width: 600px) {
+  .title {
+    font-size: 60px;
+  }
+  .subtitle {
+    font-size: 16px;
+    margin-top: -25px;
+  }
+  .navigation a {
+    font-size: 20px;
+  }
+  .navigation a:hover {
+    border-top: 6px solid #d5d5d5;
+  }
+}

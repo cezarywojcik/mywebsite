@@ -3,13 +3,41 @@
 <html>
   <head>
     <title>CezaryWojcik.com - {{ title }}</title>
+    <link href="res/css/style.css" rel="stylesheet">
     {% block head %}
     {% endblock %}
   </head>
   <body>
-    <h1>Test</h1>
-    {% block content %}
-    {% endblock %}
+    <div class="page">
+      <div class="header">
+        <div class="title">Cezary Wojcik</div>
+        <div class="subtitle">Student, Web Developer, and iPhone Developer</div>
+        <ul class="navigation">
+          <li>
+            <a href='/'>Home</a>
+          </li>
+          <li>
+            <a href='/blog'>Blog</a>
+          </li>
+          <li>
+            <a href='/about'>About</a>
+          </li>
+          <li>
+            <a href='/contact'>Contact</a>
+          </li>
+          <li>
+            <a href='/gallery'>Gallery</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <div class="footer">
+        Copyright (C) 2013 Cezary Wojcik
+      </div>
+    </div>
   </body>
 </html>
 {% endspaceless %}
