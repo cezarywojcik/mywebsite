@@ -1,24 +1,86 @@
 {% extends 'layout.twig' %}
 
 {% block head %}
+  <link href="/mysite/res/css/mosaic.css" rel="stylesheet" media="screen">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="/mysite/res/lib/mosaic.1.0.1.min.js"></script>
+  <script>$(function(){$('.bar2').mosaic({animation : 'slide'});});</script>
 {% endblock %}
 
 {% block content %}
   {% set article = {
     'title': 'Websites',
-    'content': '
-    <p>Test 1</p>'
+    'content': '<div class="mosaic-block bar2">
+      <a href="http://www.readyraven.com" target="_blank" class="mosaic-overlay">
+        <div class="details">
+          <h2>readyraven.com</h2><br>
+          <p>readyraven.com is a website created that simplifies the process of selling unwanted items.</p>
+        </div>
+      </a>
+      <div class="mosaic-backdrop"><img src="/mysite/res/img/blog/readyraven.png"/></div>
+    </div>'
   } %}
   {% include 'article.twig' %}
   {% set article = {
     'title': 'Apps',
-    'content': '<p>Test 2</p>'
+    'content': '<div class="mosaic-block bar2">
+      <a href="https://itunes.apple.com/us/app/icodecracker-free/id491093925?mt=8" target="_blank" class="mosaic-overlay">
+        <div class="details">
+          <h2>iCodeCracker - iPhone App</h2><br>
+          <p>iCodeCracker is a logic-based puzzle game that I developed for the iPhone.</p>
+        </div>
+      </a>
+      <div class="mosaic-backdrop"><img src="/mysite/res/img/blog/icodecracker.png"/></div>
+    </div>
+    <div class="mosaic-block bar2">
+      <a href="https://itunes.apple.com/us/app/sc2news-app/id497279494?mt=8" target="_blank" class="mosaic-overlay">
+        <div class="details">
+          <h2>SC2News - iPhone App</h2><br>
+          <p>SC2News App is an app that displays the latest news from the world of StarCraft II.</p>
+        </div>
+      </a>
+      <div class="mosaic-backdrop"><img src="/mysite/res/img/blog/sc2news.png"/></div>
+    </div>'
   } %}
   {% include 'article.twig' %}
   {% set article = {
     'title': 'Projects',
-    'content': '<p>Test 3</p>'
+    'content': '<div class="mosaic-block bar2">
+      <a href="/darkpassage" target="_blank" class="mosaic-overlay">
+        <div class="details">
+          <h2>Dark Passage</h2><br>
+          <p>This is a randomly generated WebGL maze that the user must navigate through given a limited amount of light.</p>
+        </div>
+      </a>
+      <div class="mosaic-backdrop"><img src="/mysite/res/img/blog/darkpassage.png"/></div>
+    </div>
+    <div class="mosaic-block bar2">
+      <a href="/gameoflife2" target="_blank" class="mosaic-overlay">
+        <div class="details">
+          <h2>Game Of Life 2</h2><br>
+          <p>This is a canvas-based terrain generator with a simple population simulation.</p>
+        </div>
+      </a>
+      <div class="mosaic-backdrop"><img src="/mysite/res/img/blog/gameoflife2.png"/></div>
+    </div>
+    <div class="mosaic-block bar2">
+      <a href="/barchartd3js" target="_blank" class="mosaic-overlay">
+        <div class="details">
+          <h2>BarchartD3.js</h2><br>
+          <p>Barchartd3.js is a javascript library that uses d3.v3 to make simple, interactive bar graphs. </p>
+        </div>
+      </a>
+      <div class="mosaic-backdrop"><img src="/mysite/res/img/blog/barchartd3js.png"/></div>
+    </div>
+    <div class="mosaic-block bar2">
+      <a href="/ratboard" target="_blank" class="mosaic-overlay">
+        <div class="details">
+          <h2>RatBoard</h2><br>
+          <p>RatBoard is a simple chat client that embeds images and youtube videos.</p>
+        </div>
+      </a>
+      <div class="mosaic-backdrop"><img src="/mysite/res/img/blog/ratboard.png"/></div>
+    </div>'
   } %}
   {% include 'article.twig' %}
 {% endblock %}
