@@ -23,6 +23,24 @@ body {
   padding: 0;
 }
 
+.prettyprint {
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* override google prettify.css */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 {
+  list-style-type: decimal
+}
+
 .page {
   background-color: #ffffff;
   font-family: Georgia;
