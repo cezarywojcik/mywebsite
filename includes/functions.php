@@ -48,7 +48,7 @@ function getArticle($id) {
             $nav .= "Previous Post</a>";
         }
         if ($nextId <= getMaxArticleId()) {
-            $nav .= "<a class='next' href='blog/$nextId'>";
+            $nav .= "<a class='next' href='/blog/$nextId'>";
             $nav .= "Next Post</a>";
         }
         $result['nav'] = $nav;
