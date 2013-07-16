@@ -77,7 +77,7 @@ $app->get('/:other+', function($other) use ($twig) {
     } else if ($arg === "gameoflife2") {
         require 'gameoflife2/index.html';
     } else if ($arg === "ratboard") {
-        require 'ratboard/index.html';
+        require 'ratboard/index.php';
     } else if ($arg === "barchartd3js") {
         require 'barchartd3js/index.html';
     } else { // not found
