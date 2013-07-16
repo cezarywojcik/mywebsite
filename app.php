@@ -68,12 +68,22 @@ $app->get('/gallery', function() use ($twig) {
     echo $twig->render('gallery.twig', array(
         'title' => 'Gallery'));
 });
-
 // OTHER
-$app->get('/:other+', function() use ($twig) {
-    // render
-    echo $twig->render('404.twig', array(
-        'title' => '404'));
+$app->get('/:other+', function($other) use ($twig) {
+    // projects
+    $arg = $other[0];
+    if ($arg === "darkpassage") {
+        require 'darkpassage/index.html';
+    } else if ($arg === "gameoflife2") {
+        require 'gameoflife2/index.html';
+    } else if ($arg === "ratboard") {
+        require 'ratboard/index.html';
+    } else if ($arg === "barchartd3js") {
+        require 'barchartd3js/index.html';
+    } else { // not found
+        echo $twig->render('404.twig', array(
+            'title' => '404'));
+    }
 });
 
 // ---- [ slim run ] ----------------------------------------------------------
