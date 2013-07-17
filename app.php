@@ -68,6 +68,12 @@ $app->get('/gallery', function() use ($twig) {
     echo $twig->render('gallery.twig', array(
         'title' => 'Gallery'));
 });
+
+// RSS FEED
+$app->get('/rss', function() {
+    require 'includes/rss.php';
+});
+
 // OTHER
 $app->get('/:other+', function($other) use ($twig) {
     // projects

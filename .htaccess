@@ -1,3 +1,7 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ app.php [QSA,L]
+
+<Files php.ini>
+deny from all
+</Files>

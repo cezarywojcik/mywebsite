@@ -97,6 +97,8 @@ function getBlogPostList() {
         $statement->close();
     }
     $content .= "</ul>";
+    $content .= '<a href="http://feedburner.google.com/fb/a/mailverify?uri=CezaryWojciksBlog&amp;loc=en_US">Subscribe to My Blog by Email</a>';
+    $content .= '<a href="http://feeds.feedburner.com/CezaryWojciksBlog" title="Subscribe to my blog!" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="border:0" align="right"></a><div class="clearfix"></div>';
     $result = array(
         'title' => 'My Blog Posts',
         'content' => $content);
