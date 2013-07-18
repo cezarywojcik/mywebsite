@@ -347,6 +347,12 @@ textarea:focus, input:focus {
     padding-top: 10px;
     font-size: 8px;
   }
+
+  .left-footer, .right-footer{
+    float: none;
+    position: relative;
+    text-align: center;
+  }
   .subtitle {
     font-size: 16px;
     margin-top: -25px;
