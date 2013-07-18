@@ -23,6 +23,13 @@ body {
   padding: 0;
 }
 
+blockquote {
+  border-left: thick solid #990012;
+  color: #555;
+  margin-left: 15px;
+  padding-left: 10px;
+}
+
 .prettyprint {
   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
      -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
