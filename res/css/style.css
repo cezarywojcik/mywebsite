@@ -59,10 +59,28 @@ li.L8 {
 }
 
 .footer {
+  position: relative;
+}
+
+.left-footer {
+  bottom: 0;
+  float: left;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  position: absolute;
+}
+
+.left-footer img {
+  margin-right: 10px;
+}
+
+.right-footer {
+  bottom: 0;
+  clear: left;
   font-size: 12px;
+  padding-bottom: 10px;
+  padding-right: 10px;
   text-align: right;
-  padding-bottom: 5px;
-  padding-right: 5px;
 }
 
 .title {
@@ -327,6 +345,7 @@ textarea:focus, input:focus {
   }
   .footer {
     padding-top: 10px;
+    font-size: 8px;
   }
   .subtitle {
     font-size: 16px;
