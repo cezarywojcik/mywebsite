@@ -22,7 +22,7 @@ $app->get('/', function() use ($twig) {
 // BLOG
 $app->get('/blog', function() use ($twig) {
     // render
-    echo $twig->render('blogpost.twig', array(
+    echo $twig->render('basic.twig', array(
         'title' => 'Blog',
         'article' => getBlogPostList()));
 });
