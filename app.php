@@ -77,16 +77,25 @@ $app->get('/rss', function() {
 // OTHER
 $app->get('/:other+', function($other) use ($twig) {
     // projects
-    $arg = $other[0];
-    if ($arg === "darkpassage") {
-        require 'darkpassage/index.html';
-    } else if ($arg === "gameoflife2") {
-        require 'gameoflife2/index.html';
-    } else if ($arg === "ratboard") {
-        require 'ratboard/index.php';
-    } else if ($arg === "barchartd3js") {
-        require 'barchartd3js/index.html';
-    } else { // not found
+    $notFound = true;
+    if (count($other) === 2 && $other[1] === "") {
+        $arg = $other[0];
+        $notFound = false;
+        if ($arg === "darkpassage") {
+            require 'darkpassage/index.html';
+        } else if ($arg === "gameoflife2") {
+            require 'gameoflife2/index.html';
+        } else if ($arg === "ratboard") {
+            require 'ratboard/index.php';
+        } else if ($arg === "barchartd3js") {
+            require 'barchartd3js/index.html';
+        } else if ($arg === "webciv") {
+            require 'webciv/index.html';
+        } else {
+            $notFound = true;
+        }
+    }
+    if ($notFound) { // not found
         echo $twig->render('404.twig', array(
             'title' => '404'));
     }
