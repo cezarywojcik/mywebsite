@@ -32,9 +32,13 @@ $app->get('/blog/:id', function($id) use ($twig) {
     // latest blog post
     $article = getArticle($id);
     // render
-    echo $twig->render('blogpost.twig', array(
-        'title' => $article['title'],
-        'article' => $article));
+    if (!$article) {
+        echo $twig->render('404.twig');
+    } else {
+        echo $twig->render('blogpost.twig', array(
+            'title' => $article['title'],
+            'article' => $article));
+    }
 });
 
 // ABOUT
@@ -96,8 +100,7 @@ $app->get('/:other+', function($other) use ($twig) {
         }
     }
     if ($notFound) { // not found
-        echo $twig->render('404.twig', array(
-            'title' => '404'));
+        echo $twig->render('404.twig');
     }
 });
 

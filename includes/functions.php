@@ -27,8 +27,27 @@ function fetch($result) {
     return $array;
 }
 
+// find whether article exists
+function articleExists($id) {
+    global $mysqli;
+    $exists = false;
+    $queryString = "SELECT title FROM blog WHERE blogid=?";
+    if ($statement = $mysqli->prepare($queryString)) {
+        $statement->bind_param("i", $id);
+        $statement->execute();
+        $result = fetch($statement);
+        if (count($result) > 0) {
+            $exists = true;
+        }
+    }
+    return $exists;
+}
+
 // get contents of article
 function getArticle($id) {
+    if (!articleExists($id)) {
+        return false;
+    }
     global $mysqli;
     $result = array();
     $queryString = "SELECT * FROM blog WHERE blogid=?";
