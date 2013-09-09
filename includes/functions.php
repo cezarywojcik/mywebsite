@@ -58,6 +58,12 @@ function getArticle($id) {
         $statement->close();
         $result['timecreated'] = date('F j, Y',
             strtotime($result['timecreated']));
+        if (substr($result['content'], 0, 3) === "MD-") { // markdown tag
+            include_once("includes/CWMarkdown.php");
+            $md = new CWMarkdown(substr($result['content'], 3,
+                strlen($result['content'])));
+            $result['content'] =$md->getHTMLString();
+        }
         $result['content'] .= "<div class='article-footer'>~</div>";
         $prevId = $result['blogid']-1;
         $nextId = $result['blogid']+1;
