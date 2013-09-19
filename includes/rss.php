@@ -17,19 +17,21 @@ $output = '<?xml version="1.0" encoding="ISO-8859-1" ?>
     <atom:link href="http://cezarywojcik.com/rss" rel="self" type="application/rss+xml" />
 ';
 
-$queryString = "SELECT * FROM blog ORDER BY timeCreated DESC LIMIT 25";
+$queryString = "SELECT blogid, timecreated
+    FROM blog ORDER BY timeCreated DESC LIMIT 25";
 $result = $mysqli->query($queryString);
 
 while ($row = $result->fetch_assoc()) {
-    $title = $row['title'];
     $blogid = $row['blogid'];
+    $article = getArticle($blogid);
+    $title = $article['title'];
     $pubDate =  date('D, d M Y H:i:s T', strtotime($row['timecreated']));;
     $link = "http://cezarywojcik.com/blog/$blogid";
     $output .= "    <item>
       <title>$title</title>
       <pubDate>$pubDate</pubDate>
       <link>$link</link>
-      <guid>$link</guid>
+      <guid isPermalink='true'>$link</guid>
     </item>
 ";
 }
